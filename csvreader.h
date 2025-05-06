@@ -5,14 +5,17 @@
 #include <vector>
 #include <fstream>
 
-#include "car.h"
+#include "cars.h"
+#include "abstractreader.h"
 
-class CsvReader
+class CsvReader : public AbstractReader
 {
 public:
     CsvReader(const std::string& filename);
-    bool isOpen();
-    std::vector<Car> readAll();
+
+    bool isOpen() const override;
+
+    std::vector<Car> readAll() override;
 
 private:
     std::ifstream fin;

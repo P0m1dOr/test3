@@ -22,7 +22,7 @@ CsvReader::CsvReader(const std::string& filename)
     fin = std::ifstream(filename);
 }
 
-bool CsvReader::isOpen()
+bool CsvReader::isOpen() const
 {
     return fin.is_open();
 }

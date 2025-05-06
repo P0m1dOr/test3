@@ -2,7 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "car.h"
+#include "cars.h"
+#include "abstractreader.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -21,7 +22,7 @@ public:
 public slots:
     void search();
     void openFile();
-    void uploadTable();
+    void uploadTable(const std::string& fileToLoad);
     void updateTable();
     void addCar();
     void saveToCsv();
